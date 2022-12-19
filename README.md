@@ -97,13 +97,13 @@ If there is no exception then execute this block.
 - Kode program dan hasil nya
 ```
 try:
-    fh = open("testlife", "w")
+    fh = open("testlife", "r")
     fh.write("This is my test life for exception handling!!")
-except IOerror:
-    print("Error : cant\'tfind file or read data")
+except IOError:
+    print("Error : cant\'t find file or read data")
 else:
     print("Written content in the file succesfully")
-    fh.c;ose()
+    fh.close()
 ```
 ![gambar1](gambar/op6.png
 
@@ -113,12 +113,13 @@ else:
 ```
 try:
     fh = open("testlife", "r")
-    fh.write("This is my test life for exception handling!!")
+    try:
+        fh.write("This is my test life for exception handling!!")
+    finally:
+        print("Goint to close the file")
+        fh.close()
 except IOError:
     print("Error : cant\'t find file or read data")
-else:
-    print("Written content in the file succesfully")
-    fh.close()
 ```
 
 ![gambar1](gambar/op8.png
@@ -133,8 +134,18 @@ Pada saat kita ingin exception di lempar ke salam block try di lanjutkan dengan 
 
 - Kode program dan hasil nya
 
+```
+# Define a function here :
 
-![gambar1](gambar/op9.png
+def temp_convert(var):
+    try:
+        return int(var)
+    except ValueError(Argument):
+        print("The argument does not contain numbera\n", Argument)
+# Call above function here
+
+temp_convert("xyz")
+```
 
 ![gambar1](gambar/op10.png
 
@@ -145,9 +156,13 @@ Pada saat kita ingin exception di lempar ke salam block try di lanjutkan dengan 
 - Pengcualian dapat merupakan string, kelas, objek kurang lebih hampir semua pengecualian python menimbulkan kelas, Dengan argument yang merupakan turunan kelas 
 
 - Mendefinisikan pengecualian dengan kode program dan hasil sebagai berikut
-
-![gambar1](gambar/op11.png
-
+```
+def functionName( level ):
+    if level < 1:
+        raise("Invalid level!".level)
+        # The code below to this would not be executed
+        # if we raise the exceptio
+```
 ![gambar1](gambar/op12.png
 
 # Pengecualian yang di tetapkan
@@ -157,7 +172,13 @@ Pada saat kita ingin exception di lempar ke salam block try di lanjutkan dengan 
 - Contoh contoh dengan runtike eror dibuat yng merupakan subkelas berguna untuk menampilkan inforkasi saat pengecualian tangkap
 
 - Kemudian di blok pengguna memunculkan dan di tangkap di blok kecuali variabel digunakan untuk membuat instance dari kelas network eror
-
-![gambar1](gambar/op13.png
-
+```
+class Networkerror(RuntimeError):
+    def __int__(self, arg):
+        self.arg = arg
+try:
+    raise Networkerror("Bad hostname")
+except Networkerror(e):
+    print(e.args)
+```
 ![gambar1](gambar/op14.png
