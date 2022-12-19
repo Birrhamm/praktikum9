@@ -34,7 +34,7 @@ print(KelvinToFahrenheit(237))
 print(int(KelvinTOFahrenheit(505.78)))
 print(KelvinToFahrenheit(-5))
 ```
-![gambar1](gambar/op2.png
+![gambar1](gambar/x1.png)
 
 # Ketika kita dalam menangani pengecualian 
 
@@ -55,7 +55,7 @@ else:
     print("Written content in the file succesfully")
     fh.close()
 ```
-![gambar1](gambar/op4.png
+![gambar1](gambar/x2.png)
 
 - Contoh membuka file yang kita tidak dapat memiliki akses atau izin sehingga kita dapat membuat pengecualian
 
@@ -105,7 +105,7 @@ else:
     print("Written content in the file succesfully")
     fh.close()
 ```
-![gambar1](gambar/op6.png
+![gambar1](gambar/x3.png)
 
 
 - Contoh ketika kita ingin di tulis lebih rapih
@@ -122,7 +122,7 @@ except IOError:
     print("Error : cant\'t find file or read data")
 ```
 
-![gambar1](gambar/op8.png
+![gambar1](gambar/x4.png)
 
 Pada saat kita ingin exception di lempar ke salam block try di lanjutkan dengan memblok setelau itu blok di eksekusi pengecualian tersebut di tangani dalam pernyataan kecuali jika terdapat lapisan yang lebih tinggi
 
@@ -147,7 +147,7 @@ def temp_convert(var):
 temp_convert("xyz")
 ```
 
-![gambar1](gambar/op10.png
+![gambar1](gambar/x5.png)
 
 # Malempar pengecualian
 
@@ -163,7 +163,7 @@ def functionName( level ):
         # The code below to this would not be executed
         # if we raise the exceptio
 ```
-![gambar1](gambar/op12.png
+![gambar1](gambar/x6.png)
 
 # Pengecualian yang di tetapkan
 
@@ -181,4 +181,4 @@ try:
 except Networkerror(e):
     print(e.args)
 ```
-![gambar1](gambar/op14.png
+![gambar1](gambar/x7.png)
