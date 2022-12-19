@@ -1,4 +1,4 @@
-## Praktikum 9
+# Praktikum 9
 
 # Exception Handling 
 - Execption handling atau (eksepsi) adalah merupakan suatu kesalahan ( eror) yang terjadi atau yang telah di lakukan pada saat proses eksekusi program sedang berjalan.
@@ -26,9 +26,14 @@ Jika pernyataan gagal maka python akan menggunakan ArgumentExpression yaitu seba
 - Berikut adalah fungai yang untuk mengubah suhu derajat kelvin menjadi derajat Fahrenheit
 
 - Kode program beserta hasil nya
-
-![gambar1](gambar/op1.png
-
+```
+def KelvinToFahrenheit(Temprature):
+    assert(Temprature >= 0 ),"Colder than  absolute zero!"
+    return((Temprature-273)*1.8)+32
+print(KelvinToFahrenheit(237))
+print(int(KelvinTOFahrenheit(505.78)))
+print(KelvinToFahrenheit(-5))
+```
 ![gambar1](gambar/op2.png
 
 # Ketika kita dalam menangani pengecualian 
@@ -40,9 +45,16 @@ Jika kita memiliki kode yang kemungkinan mencurigakan yang mungking dapat mengel
 - Pada saat kita ingin membuka file menulis konten file dan keluar dari file tersebut dengan aman
 
 - Kode program beserta hasil nya
-
-![gambar1](gambar/op3.png
-
+```
+try:
+    fh = open("testlife", "w")
+    fh.write("This is my test life for exception handling!!")
+except IOerror:
+    print("Error : cant\'tfind file or read data")
+else:
+    print("Written content in the file succesfully")
+    fh.close()
+```
 ![gambar1](gambar/op4.png
 
 - Contoh membuka file yang kita tidak dapat memiliki akses atau izin sehingga kita dapat membuat pengecualian
@@ -83,16 +95,31 @@ If there is no exception then execute this block.
 - Pada saat coba kita tidak memiliki izin untuk dapat membuka file dalam model tulis yang juga dapat di tulis 
 
 - Kode program dan hasil nya
-
-![gambar1](gambar/op5.png
-
+```
+try:
+    fh = open("testlife", "w")
+    fh.write("This is my test life for exception handling!!")
+except IOerror:
+    print("Error : cant\'tfind file or read data")
+else:
+    print("Written content in the file succesfully")
+    fh.c;ose()
+```
 ![gambar1](gambar/op6.png
 
 
 - Contoh ketika kita ingin di tulis lebih rapih
 
-
-![gambar1](gambar/op7.png
+```
+try:
+    fh = open("testlife", "r")
+    fh.write("This is my test life for exception handling!!")
+except IOError:
+    print("Error : cant\'t find file or read data")
+else:
+    print("Written content in the file succesfully")
+    fh.close()
+```
 
 ![gambar1](gambar/op8.png
 
